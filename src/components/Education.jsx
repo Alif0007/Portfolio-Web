@@ -33,14 +33,14 @@ const Education = () => {
         {
             degree: "Bachelor's in Computer Science",
             institution: "Leading University, Dhaka",
-            period: "2020 - 2024",
+            period: "2019 - 2023",
             description: "Focused on software engineering, web development, and database management. Completed capstone project on full-stack web application development.",
             icon: FiAward,
         },
         {
             degree: "Higher Secondary Certificate (HSC)",
-            institution: "Dhaka College",
-            period: "2018 - 2020",
+            institution: "Cambrian College",
+            period: "2016 - 2018",
             description: "Science background with focus on Mathematics and Computer Science. Achieved excellent results and developed foundational programming skills.",
             icon: FiBook,
         },

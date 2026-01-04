@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { FiMail, FiPhone, FiSend } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const { theme } = useTheme();
@@ -47,15 +48,42 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setSubmitStatus(null);
 
-        // Simulate form submission
-        setTimeout(() => {
+        try {
+            // EmailJS configuration
+            const serviceID = 'service_portfolio'; // You'll need to replace this
+            const templateID = 'template_portfolio'; // You'll need to replace this
+            const publicKey = '4uwRtbV_YttSbi_pc'; // You'll need to replace this
+
+            // Template parameters
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                message: formData.message,
+                to_email: 'alaminalif373@gmail.com',
+            };
+
+            // Send email using EmailJS
+            await emailjs.send(
+                serviceID,
+                templateID,
+                templateParams,
+                publicKey
+            );
+
             setIsSubmitting(false);
             setSubmitStatus('success');
             setFormData({ name: '', email: '', message: '' });
 
             setTimeout(() => setSubmitStatus(null), 5000);
-        }, 1500);
+        } catch (error) {
+            console.error('Email send failed:', error);
+            setIsSubmitting(false);
+            setSubmitStatus('error');
+
+            setTimeout(() => setSubmitStatus(null), 5000);
+        }
     };
 
     const contactInfo = [
@@ -68,14 +96,14 @@ const Contact = () => {
         {
             icon: FiPhone,
             label: 'Phone',
-            value: '+880 1XX-XXXXXXX',
-            href: 'tel:+8801XXXXXXXXX',
+            value: '+880 1931889147',
+            href: 'tel:+8801931889147',
         },
         {
             icon: FaWhatsapp,
             label: 'WhatsApp',
-            value: '+880 1XX-XXXXXXX',
-            href: 'https://wa.me/8801XXXXXXXXX',
+            value: '+880 1931889147',
+            href: 'https://wa.me/8801931889147',
         },
     ];
 
@@ -119,8 +147,8 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="John Doe"
                                     className={`input input-bordered w-full ${theme === 'dark'
-                                            ? 'bg-white/5 border-white/10 text-white placeholder-gray-500'
-                                            : 'bg-white border-gray-300 text-gray-900'
+                                        ? 'bg-white/5 border-white/10 text-white placeholder-gray-500'
+                                        : 'bg-white border-gray-300 text-gray-900'
                                         }`}
                                     required
                                 />
@@ -139,8 +167,8 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="john@example.com"
                                     className={`input input-bordered w-full ${theme === 'dark'
-                                            ? 'bg-white/5 border-white/10 text-white placeholder-gray-500'
-                                            : 'bg-white border-gray-300 text-gray-900'
+                                        ? 'bg-white/5 border-white/10 text-white placeholder-gray-500'
+                                        : 'bg-white border-gray-300 text-gray-900'
                                         }`}
                                     required
                                 />
@@ -158,8 +186,8 @@ const Contact = () => {
                                     onChange={handleChange}
                                     placeholder="Tell me about your project..."
                                     className={`textarea textarea-bordered w-full h-32 ${theme === 'dark'
-                                            ? 'bg-white/5 border-white/10 text-white placeholder-gray-500'
-                                            : 'bg-white border-gray-300 text-gray-900'
+                                        ? 'bg-white/5 border-white/10 text-white placeholder-gray-500'
+                                        : 'bg-white border-gray-300 text-gray-900'
                                         }`}
                                     required
                                 />
@@ -190,6 +218,13 @@ const Contact = () => {
                                     <span>Message sent successfully! I'll get back to you soon.</span>
                                 </div>
                             )}
+
+                            {/* Error Message */}
+                            {submitStatus === 'error' && (
+                                <div className="alert alert-error">
+                                    <span>Failed to send message. Please try again or email me directly at alaminalif373@gmail.com</span>
+                                </div>
+                            )}
                         </form>
                     </div>
 
@@ -207,8 +242,8 @@ const Contact = () => {
                                         key={index}
                                         href={info.href}
                                         className={`flex items-center gap-4 p-4 rounded-xl transition-all hover:scale-105 ${theme === 'dark'
-                                                ? 'bg-white/5 hover:bg-white/10'
-                                                : 'bg-black/5 hover:bg-black/10'
+                                            ? 'bg-white/5 hover:bg-white/10'
+                                            : 'bg-black/5 hover:bg-black/10'
                                             }`}
                                     >
                                         <div className={`p-3 rounded-xl ${theme === 'dark' ? 'bg-purple-primary/20' : 'bg-purple-primary/10'
