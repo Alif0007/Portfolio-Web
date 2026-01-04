@@ -1,0 +1,5 @@
+Place your resume PDF file here and name it "resume.pdf"
+
+The portfolio website expects a resume file at: /public/resume.pdf
+
+This file will be accessible at: http://yourwebsite.com/resume.pdf
