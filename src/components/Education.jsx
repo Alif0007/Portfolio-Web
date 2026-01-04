@@ -32,7 +32,7 @@ const Education = () => {
     const educationData = [
         {
             degree: "Bachelor's in Computer Science",
-            institution: "Leading University, Dhaka",
+            institution: "Port City International University, Chattogram",
             period: "2019 - 2023",
             description: "Focused on software engineering, web development, and database management. Completed capstone project on full-stack web application development.",
             icon: FiAward,
