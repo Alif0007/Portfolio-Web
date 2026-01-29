@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { FiExternalLink, FiGithub, FiX } from 'react-icons/fi';
+import Daraz from '../../public/Daraz-Clone.png'
+import BookShelf from '../../public/BookShelf.png'
+import TicketBari from '../../public/TicketBari.png'
 
 const Projects = () => {
     const { theme } = useTheme();
@@ -35,7 +38,7 @@ const Projects = () => {
             id: 1,
             title: "Book Shelf",
             shortDesc: "Digital book library with user authentication and CRUD operations",
-            image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&h=500&fit=crop",
+            image: BookShelf,
             tech: ["React", "Vite", "Tailwind CSS", "DaisyUI", "Firebase", "MongoDB", "Axios"],
             liveLink: "https://golden-peony-a77558.netlify.app/",
             githubClient: "https://github.com/Alif0007/book-shelf-client",
@@ -47,10 +50,10 @@ const Projects = () => {
             id: 2,
             title: "Daraz Clone",
             shortDesc: "E-commerce platform clone with product listings and cart functionality",
-            image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
+            image: Daraz,
             tech: ["Vue.js", "JavaScript", "CSS", "Vuex"],
-            liveLink: "#",
-            githubClient: "https://github.com/Alif0007",
+            liveLink: "https://subtle-jelly-a52a8c.netlify.app/",
+            githubClient: "https://github.com/Alif0007/Daraz-clone-vue",
             fullDescription: "A full-featured e-commerce platform inspired by Daraz, built with Vue.js. Features include dynamic product listings, category filtering, shopping cart management, and responsive design. The application demonstrates proficiency in Vue.js ecosystem and state management patterns.",
             challenges: "Managing complex state across multiple components using Vuex, implementing efficient product filtering and search functionality, and ensuring smooth user experience with cart operations and price calculations.",
             improvements: "Add backend integration with Node.js and Express for full-stack functionality, implement user authentication and order management, integrate payment gateway, add product reviews and ratings system, and optimize performance for large product catalogs.",
@@ -59,9 +62,9 @@ const Projects = () => {
             id: 3,
             title: "TicketBari",
             shortDesc: "Ticket booking system with authentication and real-time availability",
-            image: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800&h=500&fit=crop",
+            image: TicketBari,
             tech: ["React", "Firebase", "Tailwind CSS", "React Router"],
-            liveLink: "#",
+            liveLink: "https://mellifluous-sorbet-2199c8.netlify.app/",
             githubClient: "https://github.com/Alif0007/TicketBari-client",
             fullDescription: "A modern ticket booking platform that allows users to browse events, check availability, and book tickets securely. Features Firebase authentication, real-time seat availability updates, booking history management, and responsive design optimized for both desktop and mobile devices.",
             challenges: "Implementing secure payment integration simulation while maintaining data integrity, handling concurrent booking requests to prevent double-booking, and creating an intuitive booking flow that guides users through the entire process seamlessly.",

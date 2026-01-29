@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { GiCricketBat, GiPaintBrush } from 'react-icons/gi';
 import { FiUsers } from 'react-icons/fi';
+import aboutImg from '../../public/IMG_3768.JPEG'
 
 const About = () => {
     const { theme } = useTheme();
@@ -86,7 +87,7 @@ const About = () => {
                         <div className="relative group">
                             <div className="absolute -inset-1 bg-gradient-to-r from-purple-primary via-blue-primary to-green-primary rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-300"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=500&h=600&fit=crop"
+                                src={aboutImg}
                                 alt="About Al Amin Alif"
                                 className="relative w-full max-w-md rounded-2xl object-cover shadow-2xl"
                             />

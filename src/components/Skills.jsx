@@ -42,10 +42,10 @@ const Skills = () => {
             { name: 'Tailwind CSS', icon: SiTailwindcss, level: 90, color: '#06B6D4' },
             { name: 'HTML5', icon: FaHtml5, level: 95, color: '#E34F26' },
             { name: 'CSS3', icon: FaCss3Alt, level: 90, color: '#1572B6' },
-            { name: 'Vue.js', icon: FaVuejs, level: 75, color: '#4FC08D' },
+            { name: 'Vue.js', icon: FaVuejs, level: 60, color: '#4FC08D' },
         ],
         backend: [
-            { name: 'Node.js', icon: FaNodeJs, level: 85, color: '#339933' },
+            { name: 'Node.js', icon: FaNodeJs, level: 80, color: '#339933' },
             { name: 'Express.js', icon: SiExpress, level: 85, color: '#000000' },
             { name: 'MongoDB', icon: SiMongodb, level: 80, color: '#47A248' },
         ],
@@ -83,10 +83,10 @@ const Skills = () => {
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === tab.id
-                                    ? 'bg-gradient-to-r from-purple-primary to-blue-primary text-white shadow-glow'
-                                    : theme === 'dark'
-                                        ? 'glass-effect text-gray-300 hover:text-white'
-                                        : 'glass-effect-light text-gray-700 hover:text-gray-900'
+                                ? 'bg-gradient-to-r from-purple-primary to-blue-primary text-white shadow-glow'
+                                : theme === 'dark'
+                                    ? 'glass-effect text-gray-300 hover:text-white'
+                                    : 'glass-effect-light text-gray-700 hover:text-gray-900'
                                 }`}
                         >
                             {tab.label}

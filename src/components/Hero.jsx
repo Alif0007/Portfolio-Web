@@ -1,5 +1,6 @@
 import { FiGithub, FiLinkedin, FiTwitter, FiFacebook, FiDownload } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
+import dp from '../../public/Professional DP.png'
 
 const Hero = () => {
     const { theme } = useTheme();
@@ -30,7 +31,7 @@ const Hero = () => {
                     <div className="relative group">
                         <div className="absolute -inset-1 bg-gradient-to-r from-purple-primary via-blue-primary to-green-primary rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
                         <img
-                            src="https://scontent.fdac198-1.fna.fbcdn.net/v/t39.30808-6/486331888_2669158276626839_3524288496683313016_n.jpg?_nc_cat=106&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHYASn8jyBKyhlBcojasSAXjQ6-_Fi9TH2NDr78WL1MfXfszOYpsSDqZP3JSSvl4RpP9fJUcALzzDgxneQQo0cL&_nc_ohc=yrHelLht6HsQ7kNvwFQpHUc&_nc_oc=AdnUi5TADtLH2S4GAwNKN_A9TLe94PAUdHrGUDgSab5u7C1fQLsQ2d9qSt2xcQu-C6o&_nc_zt=23&_nc_ht=scontent.fdac198-1.fna&_nc_gid=F7OOxq-445reJWxejAc3Jw&oh=00_Afq-rGsUz17CBXOHvETCDCXXr4DjibD2dvERp-_r2I2a8w&oe=6960B542"
+                            src={dp}
                             alt="Al Amin Alif"
                             className="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-purple-primary/50"
                         />
@@ -79,7 +80,7 @@ const Hero = () => {
 
                     {/* CTA Button */}
                     <a
-                        href="/resume.pdf"
+                        href="/Al-Amin-Alif(resume).pdf"
                         download
                         className="btn btn-lg bg-gradient-to-r from-purple-primary via-blue-primary to-green-primary border-0 text-white flex items-center gap-3 hover:shadow-glow hover:scale-105 transition-all duration-300 px-8 py-4  text-lg"
                     >

@@ -1,14 +1,15 @@
 import { useTheme } from '../context/ThemeContext';
 import { FiGithub, FiLinkedin, FiTwitter, FiFacebook, FiHeart } from 'react-icons/fi';
+import { FaWhatsapp } from "react-icons/fa"
 
 const Footer = () => {
     const { theme } = useTheme();
 
     const socialLinks = [
         { icon: FiGithub, href: 'https://github.com/Alif0007', label: 'GitHub' },
-        { icon: FiLinkedin, href: 'https://www.linkedin.com/in/al-amin-alif', label: 'LinkedIn' },
-        { icon: FiTwitter, href: 'https://twitter.com', label: 'Twitter' },
-        { icon: FiFacebook, href: 'https://facebook.com', label: 'Facebook' },
+        { icon: FiLinkedin, href: 'https://www.linkedin.com/in/al-amin-alif7/', label: 'LinkedIn' },
+        { icon: FaWhatsapp, href: 'https://wa.me/+8801931889147', label: 'Twitter' },
+        { icon: FiFacebook, href: 'https://www.facebook.com/alamin.alif.129/', label: 'Facebook' },
     ];
 
     const quickLinks = [

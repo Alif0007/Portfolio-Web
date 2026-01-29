@@ -37,10 +37,10 @@ const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? theme === 'dark'
-                        ? 'glass-effect shadow-lg'
-                        : 'glass-effect-light shadow-lg'
-                    : 'bg-transparent'
+                ? theme === 'dark'
+                    ? 'glass-effect shadow-lg'
+                    : 'glass-effect-light shadow-lg'
+                : 'bg-transparent'
                 }`}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,8 +62,8 @@ const Navbar = () => {
                                 href={link.href}
                                 onClick={(e) => handleNavClick(e, link.href)}
                                 className={`px-4 py-2 rounded-lg transition-all duration-300 ${theme === 'dark'
-                                        ? 'text-gray-300 hover:text-white hover:bg-white/10'
-                                        : 'text-gray-700 hover:text-gray-900 hover:bg-black/5'
+                                    ? 'text-gray-300 hover:text-white hover:bg-white/10'
+                                    : 'text-gray-700 hover:text-gray-900 hover:bg-black/5'
                                     }`}
                             >
                                 {link.name}
@@ -76,15 +76,15 @@ const Navbar = () => {
                         <button
                             onClick={toggleTheme}
                             className={`p-2 rounded-lg transition-all duration-300 ${theme === 'dark'
-                                    ? 'text-yellow-300 hover:bg-white/10'
-                                    : 'text-gray-700 hover:bg-black/5'
+                                ? 'text-yellow-300 hover:bg-white/10'
+                                : 'text-gray-700 hover:bg-black/5'
                                 }`}
                             aria-label="Toggle theme"
                         >
                             {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
                         </button>
                         <a
-                            href="/resume.pdf"
+                            href="/Al-Amin-Alif(resume).pdf"
                             download
                             className="btn btn-primary bg-gradient-to-r from-purple-primary to-blue-primary border-0 text-white flex items-center gap-2 hover:shadow-glow transition-all"
                         >
@@ -98,8 +98,8 @@ const Navbar = () => {
                         <button
                             onClick={toggleTheme}
                             className={`p-2 rounded-lg transition-all ${theme === 'dark'
-                                    ? 'text-yellow-300 hover:bg-white/10'
-                                    : 'text-gray-700 hover:bg-black/5'
+                                ? 'text-yellow-300 hover:bg-white/10'
+                                : 'text-gray-700 hover:bg-black/5'
                                 }`}
                             aria-label="Toggle theme"
                         >
@@ -108,8 +108,8 @@ const Navbar = () => {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className={`p-2 rounded-lg transition-all ${theme === 'dark'
-                                    ? 'text-white hover:bg-white/10'
-                                    : 'text-gray-900 hover:bg-black/5'
+                                ? 'text-white hover:bg-white/10'
+                                : 'text-gray-900 hover:bg-black/5'
                                 }`}
                             aria-label="Toggle menu"
                         >
@@ -131,15 +131,15 @@ const Navbar = () => {
                             href={link.href}
                             onClick={(e) => handleNavClick(e, link.href)}
                             className={`block px-4 py-3 rounded-lg transition-all ${theme === 'dark'
-                                    ? 'text-gray-300 hover:text-white hover:bg-white/10'
-                                    : 'text-gray-700 hover:text-gray-900 hover:bg-black/5'
+                                ? 'text-gray-300 hover:text-white hover:bg-white/10'
+                                : 'text-gray-700 hover:text-gray-900 hover:bg-black/5'
                                 }`}
                         >
                             {link.name}
                         </a>
                     ))}
                     <a
-                        href="/resume.pdf"
+                        href="/Al-Amin-Alif(resume).pdf"
                         download
                         className="btn btn-primary bg-gradient-to-r from-purple-primary to-blue-primary border-0 text-white w-full flex items-center justify-center gap-2 mt-4"
                     >
